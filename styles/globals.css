@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
+}
+
+@media (max-width: 470px) {
+	html {
+		scroll-padding-top: 70px;
+	}
+}
+
+h1 {
+	@apply text-4xl sm:text-6xl font-semibold mb-3;
+}
+
+h2 {
+	@apply text-3xl sm:text-4xl font-semibold mb-3;
+}
+
+h3 {
+	@apply text-2xl font-bold mb-3;
+}
+
+button {
+	@apply rounded-md px-3 py-2 transition delay-150 duration-300 hover:scale-105 flex gap-2 items-center shadow-md;
+}
+
+.btn-primary {
+	@apply bg-primary text-white;
+}
+
+.btn-secondary {
+	@apply bg-secondary text-white;
+}
+
+.btn-outline {
+	@apply border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white;
+}
+
+button svg {
+	transition: transform 0.2s ease-in-out;
+}
+
+button svg:active {
+	transform: none;
+}
+
+button.animate svg {
+	animation: shake 1s ease-in-out 1;
+}
+
+@keyframes shake {
+	0% {
+		transform: translateY(0) rotate(0deg);
+	}
+	20% {
+		transform: translateY(-7px) rotate(-5deg);
+	}
+	40% {
+		transform: translateY(-7px) rotate(5deg);
+	}
+	50% {
+		transform: translateY(-7px) rotate(-3deg);
+	}
+	60% {
+		transform: translateY(-7px) rotate(3deg);
+	}
+	70% {
+		transform: translateY(-7px) rotate(-1deg);
+	}
+	80% {
+		transform: translateY(-7px) rotate(1deg);
+	}
+	100% {
+		transform: translateY(0) rotate(0deg);
+	}
+}
+
+.box {
+	@apply rounded-lg bg-gray-100 shadow-xl;
+}
+
+table {
+	@apply w-full mt-5;
+}
+
+table thead tr td {
+	@apply text-sm text-gray-400 font-semibold uppercase;
+}
+
+table tr td {
+	@apply p-3;
+}
+
+img {
+	@apply max-w-[100%] max-h-[100%];
+}
+
+input,
+textarea,
+select {
+	@apply border-2 border-gray-200 rounded-md p-2 focus:outline-none focus:border-primary mb-1 w-full shadow-md;
+}
+
+label {
+	@apply text-sm text-gray-500;
+}
+
+.box-height {
+	min-height: calc(100vh - 120px);
+}
+
+.orders {
+	@apply w-full mt-5 shadow-md rounded-lg bg-white;
+}
+
+.orders thead tr td {
+	@apply text-sm uppercase border-b-2 border-gray-300;
+}
+
+.orders tr td {
+	@apply p-2;
+}
